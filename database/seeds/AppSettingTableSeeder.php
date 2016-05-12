@@ -16,21 +16,21 @@ class AppSettingTableSeeder extends Seeder
         $appSettings = [
             [
                 'key' => 'name',
-                'value' => 'GCMS',
+                'value' => 'CMS',
             ],
             [
                 'key' => 'company',
-                'value' => 'GTK',
+                'value' => 'HaiTT',
             ],
             [
                 'key' => 'email',
-                'value' => 'cuong@gtk.vn',
+                'value' => 'haitt55@gmail.com',
             ], [
                 'key' => 'phone',
-                'value' => '0979.861.547',
+                'value' => '0945.880.668',
             ], [
                 'key' => 'address',
-                'value' => 'No. 1C, Lane 105/41 Yen Hoa, Cau Giay District, Hanoi',
+                'value' => '333, My Dinh, Tu Liem District, Hanoi',
             ], [
                 'key' => 'page_title',
                 'value' => 'An awesome CMS!',
