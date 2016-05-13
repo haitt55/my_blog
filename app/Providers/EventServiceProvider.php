@@ -24,6 +24,7 @@ class EventServiceProvider extends ServiceProvider
         'App\Listeners\MessageEventListener',
         'App\Listeners\PageEventListener',
         'App\Listeners\UserEventListener',
+        'App\Listeners\BlogEventListener',
     ];
 
     /**
