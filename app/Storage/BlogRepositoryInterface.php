@@ -6,6 +6,6 @@ interface BlogRepositoryInterface extends RepositoryInterface
 {
     public function findBySlug($slug);
 
-    public function getPublishedArticles();
+    public function getPublishedBlogs();
 }
 ?>

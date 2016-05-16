@@ -4,7 +4,7 @@
             <li>
                 <a href="{{ route('admin.home.dashboard') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
             </li>
-            <li class="hidden">
+            <li>
                 <a href="{{ route('admin.blogs.index') }}"><i class="fa fa-tag fa-fw"></i> Blogs</a>
             </li>
             <li>
