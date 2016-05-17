@@ -53,7 +53,7 @@ class BlogsController extends Controller
      */
     public function store(BlogRequest $request)
     {
-        $blog = $this->blogRepository->create($request->all(), $request->file('head_image'));
+        $blog = $this->blogRepository->create($request->all(), $request->file('head_image'), $request->file('content'));
 
         event(new BlogWasCreated($blog));
 
@@ -95,7 +95,7 @@ class BlogsController extends Controller
      */
     public function update(BlogRequest $request, $id)
     {
-        $blog = $this->blogRepository->update($id, $request->all());
+        $blog = $this->blogRepository->update($id, $request->all(), $request->file('head_image') , $request->file('content'));
 
         event(new BlogWasUpdated($blog));
 

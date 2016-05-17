@@ -7,6 +7,7 @@ use App\Storage\UserRepositoryInterface as UserRepository;
 use App\Storage\PageRepositoryInterface as PageRepository;
 use App\Storage\ArticleRepositoryInterface as ArticleRepository;
 use App\Storage\MessageRepositoryInterface as MessageRepository;
+use App\Storage\BlogRepositoryInterface as BlogRepository;
 
 class HomeComposer
 {
@@ -18,15 +19,19 @@ class HomeComposer
 
     protected $message;
 
+    protected $blog;
+
     public function __construct(UserRepository $user,
         PageRepository $page,
         ArticleRepository $article,
-        MessageRepository $message)
+        MessageRepository $message,
+        BlogRepository $blog)
     {
         $this->user = $user;
         $this->page = $page;
         $this->article = $article;
         $this->message = $message;
+        $this->blog = $blog;
     }
 
     /**
@@ -41,5 +46,6 @@ class HomeComposer
         $view->with('countArticles', $this->article->all()->count());
         $view->with('countMessages', $this->message->unread()->count());
         $view->with('countUsers', $this->user->all()->count());
+        $view->with('countBlogs', $this->blog->all()->count());
     }
 }

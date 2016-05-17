@@ -45,7 +45,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="content">Content</label>
-                                    <textarea name="content" id="content">{{ old('content') }}</textarea>
+                                    <input type="file" name="content" id="content">
+                                    <p style="font-style: italic;">(markdown file type)</p>
+                                    <!-- <textarea name="content" id="content">{{ old('content') }}</textarea> -->
                                 </div>
                                 <div class="form-group">
                                     <label for="page_title">Page Title</label>
@@ -88,11 +90,11 @@
             minHeight: null,
             maxHeight: null
         });
-        $('#content').summernote({
-            height: 300,
-            minHeight: null,
-            maxHeight: null
-        });
+        // $('#content').summernote({
+        //     height: 300,
+        //     minHeight: null,
+        //     maxHeight: null
+        // });
 
         $("#head_image").click(function(){
             readURL(this);

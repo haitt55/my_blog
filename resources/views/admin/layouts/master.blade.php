@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <meta name="csrf_token" content="{{ csrf_token() }}" />
 
-    <title>GCMS - @yield('title')</title>
+    <title>@yield('title')</title>
 
     @section('css')
     <!-- Bootstrap Core CSS -->
