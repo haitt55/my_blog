@@ -6,6 +6,8 @@
 
 @section('meta_description', app_settings('meta_description'))
 
+@section('head_image', 'templates/web/business-casual/img/slide-1.jpg')
+
 @section('content')
 
 <!-- Main Content -->
@@ -15,7 +17,7 @@
             <?php $index = count($blogs); ?>
             @foreach($blogs as $blog)
             <div class="post-preview" id="{{ $index }}">
-                <a href="post.html">
+                <a href="{{ blog_path($blog) }}">
                     <h2 class="post-title">
                         {!! $blog->title !!}
                     </h2>

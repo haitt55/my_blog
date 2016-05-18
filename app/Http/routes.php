@@ -35,3 +35,4 @@ Route::get('articles.html', ['uses' => 'ArticlesController@index', 'as' => 'arti
 Route::get('articles/{slug}.html', ['uses' => 'ArticlesController@show', 'as' => 'articles.show']);
 Route::get('{slug}.html', ['uses' => 'PagesController@show', 'as' => 'pages.show']);
 Route::post('messages', ['uses' => 'MessagesController@store', 'as' => 'messages.store']);
+Route::get('blogs/{slug}.html', ['uses' => 'BlogsController@show', 'as' => 'blogs.show']);

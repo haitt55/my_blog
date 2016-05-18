@@ -18,6 +18,11 @@ function app_settings($key = null)
     return $key ? $appSettings->get($key) : $appSettings;
 }
 
+function blog_path(App\Models\Blog $blog)
+{
+    return '/blogs/' . $blog->slug . '.html';
+}
+
 function image($src, $htmlOptions = array(), $noImageSrc = null)
 {
     $additionalHtml = '';

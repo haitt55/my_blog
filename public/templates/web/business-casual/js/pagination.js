@@ -45,7 +45,7 @@ function nextPage() {
 }
 
 function showHideNextButton(startPosition) {
-    if (startPosition - perPage < perPage) {
+    if (startPosition - perPage < 0) {
         if (!$('#next-page').hasClass('hidden')) {
             $('#next-page').addClass('hidden');
         }
